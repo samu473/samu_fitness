@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Samu Fitness</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link href="./fitness.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-sm p-0 bg-aqua" id="navbar" data-bs-theme="dark">
+			<div class="container-fluid" id="navbar-window">
+
+				<a class="navbar-brand" href="#">
+					<svg width="32px" height="32px" fill="#ffffff" stroke="#ffffff" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+						<path d="m503.35 214.27h-14.765v-12.181c0-25.301-18.441-46.365-42.587-50.49v-1.262c0-28.25-22.985-51.235-51.236-51.235s-51.236 22.985-51.236 51.235v63.933h-175.06v-63.932c0-28.25-22.985-51.235-51.236-51.235s-51.236 22.985-51.236 51.235v1.262c-24.146 4.125-42.587 25.188-42.587 50.49v12.181h-14.763c-4.777 0-8.649 3.872-8.649 8.649v66.158c0 4.778 3.872 8.649 8.649 8.649h14.765v12.181c0 25.301 18.441 46.365 42.587 50.49v1.262c0 28.25 22.985 51.235 51.236 51.235s51.236-22.985 51.236-51.235v-63.933h175.06v63.933c0 28.25 22.985 51.235 51.236 51.235s51.236-22.985 51.236-51.235v-1.262c24.146-4.125 42.587-25.188 42.587-50.49v-12.181h14.765c4.778 0 8.649-3.872 8.649-8.649v-66.158c-3e-3 -4.778-3.875-8.65-8.652-8.65zm-479.94 66.159h-6.115v-48.86h6.115v48.86zm42.585 62.295c-14.536-3.834-25.289-17.092-25.289-32.816v-107.82c0-15.724 10.751-28.981 25.289-32.816v173.45zm85.174 18.936c0 18.713-15.225 33.937-33.938 33.937s-33.938-15.224-33.938-33.937v-211.32c0-18.713 15.225-33.937 33.938-33.937s33.938 15.224 33.938 33.937v211.32zm32.752-81.231h-15.454v-48.86h15.454v48.86zm126.85 0h-109.56v-48.86h109.56v48.86zm32.752 0h-15.453v-48.86h15.453v48.86zm85.172 81.231c0 18.713-15.225 33.937-33.938 33.937s-33.938-15.224-33.938-33.937v-211.32c0-18.713 15.225-33.937 33.938-33.937s33.938 15.224 33.938 33.937v211.32zm42.587-51.752c0 15.724-10.751 28.981-25.289 32.816v-173.45c14.536 3.834 25.289 17.092 25.289 32.816v107.82zm23.414-29.479h-6.115v-48.86h6.115v48.86z"/>
+					</svg>
+					Samu Fitness
+				</a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#left-sidebar" aria-controls="left-sidebar" aria-expanded="false" aria-label="Toggle sidebar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<form class="d-flex my-2 mx-auto" role="search">
+					<input class="form-control d-none d-sm-block" type="search" placeholder="Cerca" aria-label="Cerca">
+					<button class="btn btn-outline-success d-none d-sm-block ms-1" type="submit">Cerca</button>
+				</form>
+				
+				<div class="navbar-nav">
+					<a class="nav-item nav-link" href="#" title="Profilo utente">
+					  	<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+							<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+							<path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+					  	</svg>
+					</a>
+				</div>
+			</div>
+		</nav>
+        <div class="float-end" id="signup-logout"></div>
+        <div id="alert-message"></div>
+		<main class = "container-fluid row">
+			<aside class = "collapse d-sm-block col-sm-4 col-12 bg-light p-3" id = "left-sidebar">
+				<div class="list-group list-group-flush border">
+					<a href="#" data-id="all" class="list-group-item list-group-item-action active" aria-current="true">Tutti</a>
+					<a href="#" data-id="unmissable" class="list-group-item list-group-item-action">Imperdibili</a>
+					<a href="#" data-id="today" class="list-group-item list-group-item-action">Allenamento di oggi</a>
+					<a href="#" data-id="week" class="list-group-item list-group-item-action">Allenamenti della settimana</a>
+					<a href="#" data-id="done" class="list-group-item list-group-item-action">Svolti</a>
+					<a href="#" data-id="undone" class="list-group-item list-group-item-action">Inconclusi</a>
+				</div>
+				<div class="list-group list-group-flush border mt-2">
+					<span id="category" class="list-group-item dropdown">
+					  	<div class="dropdown">
+							<span class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+						  		Settori
+							</span>
+							<ul class="dropdown-menu">
+						  		<!-- le varie voci (categorie) sono inserite da JS -->
+							</ul>
+					  	</div> 
+					</span>
+				</div>
+			</aside>
+
+			<div class = "col-sm-8 col-12">
+				<h1 id="filter-title">Tutti</h1>
+				<div id = "session-container">
+					<div class="table-responsive rounded-3" id="session-list">
+						<table class="table table-striped m-0">
+							<tbody>
+						  	</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="text-end mt-2"> 
+					<button type="button" id="new-session-btn" class="btn btn-success text-end rounded-5 bg-aqua" data-bs-toggle="modal" data-bs-target="#newSessionModal">&#43;</button>
+				</div>
+			</div>
+		</main>
+
+        <div id="profile" class="container-fluid">
+        </div>
+
+        <div class="modal fade" id="signup-modal" tabindex="-1" aria-labelledby="signup-modal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="signup-modalLabel">Nuovo utente</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                  <form class="needs-validation">
+                      <div class="mb-3">
+                      <label for="firstname" class="col-form-label">Nome:</label>
+                      <input type="text" class="form-control" id="firstname" required autocomplete="given-name">
+                      </div>
+                      <div class="mb-3">
+                      <label for="lastname" class="col-form-label">Cognome:</label>
+                      <input type="text" class="form-control" id="lastname" required autocomplete="family-name">
+                      </div>
+                      <div class="mb-3">
+                      <label for="newusername" class="col-form-label">Username:</label>
+                      <input type="text" class="form-control" id="newusername" required autocomplete="username">
+                      </div>
+                      <div class="mb-3">
+                        <label for="newpassword" class="col-form-label">Password:</label>
+                        <input type="password" class="form-control" id="newpassword" required autocomplete="new-password">
+                        </div>
+                      <div class="mb-3">
+                      <label for="email" class="form-label">Indirizzo Email:</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required autocomplete="email">
+                      <div id="emailHelp" class="form-text">Non condivideremo la tua email con nessuno.</div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+                      <button type="submit" class="btn btn-primary">Iscriviti!</button>
+                    </div>
+                  </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+		<div class="modal fade" id="newSessionModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="newSessionModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title fs-5" id="newSessionModalLabel">Nuova sessione di allenamento</h1>
+						<button type="button" class="btn-close" id="close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form class="needs-validation" novalidate>
+							<div class="input-group mb-3">
+								<label for="session-date" class="input-group-text">Giorno:</label>
+								<input type="date" class="form-control" id="session-date" required>
+							</div>
+							<div class="form-check mb-3"> 
+								<input type="checkbox" class="form-check-input" id="session-unmissable">
+								<label for="session-unmissable" class="form-check-label">Imperdibile</label>
+							</div>
+							<div class="input-group mb-3">
+					  			<label for="session-sector" class="input-group-text">Settori</label>
+					  			<select class="form-select form-select-sm" id="session-sector" multiple aria-label="Selezione categoria" required>
+						  		<!-- le opzioni sono inserite da JS -->
+					  			</select>
+							</div>
+							<div class="input-group mb-3">
+								<label class="input-group-text">Difficoltà:</label>
+								<input type="radio" class="btn-check" name="diff-opt" id="difficulty-beginner" autocomplete="off" checked="">
+    							<label class="btn" for="difficulty-beginner">Principiante</label>
+    							<input type="radio" class="btn-check" name="diff-opt" id="difficulty-intermediate" autocomplete="off">
+    							<label class="btn" for="difficulty-intermediate">Intermedio</label>
+								<input type="radio" class="btn-check" name="diff-opt" id="difficulty-expert" autocomplete="off">
+    							<label class="btn" for="difficulty-expert">Esperto</label>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+					  			<button type="submit" class="btn btn-primary" id="add-session">Aggiungi Sessione</button>
+							</div>
+				  		</form>
+					</div>
+			  	</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+        <script src="./moment-with-locales.js"></script>
+		<script type="module" src="./main.js"></script>
+	</body>
+</html>
