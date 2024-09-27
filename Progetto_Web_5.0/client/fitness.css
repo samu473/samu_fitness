@@ -1,0 +1,29 @@
+.bg-aqua {
+    background-color: #96dbd0;
+}
+
+#sidebar{
+    width: 25%;
+}
+
+.list-group-item {
+    background-color: transparent;
+}
+
+.list-group-item.active {
+    background-color: #96dbd0;
+    border-color: #96dbd0;
+}
+
+.list-group-item:hover {
+    background-color: #25c5aa;
+    border-color: #999999;
+}
+
+h1 {
+    font-size: 24pt;
+}
+
+.session-list {
+    border: 3px solid #999999;
+}
