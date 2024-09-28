@@ -1,0 +1,34 @@
+.bg-aqua {
+    background-color: #96dbd0;
+}
+
+#sidebar{
+    width: 25%;
+}
+
+.list-group-item {
+    background-color: transparent;
+}
+
+.list-group-item.active {
+    background-color: #96dbd0;
+    border-color: #96dbd0;
+}
+
+.list-group-item:hover {
+    background-color: #25c5aa;
+    border-color: #999999;
+}
+
+input[disabled] + label, input[disabled]{
+    opacity: 1 !important;
+    pointer-events: none;
+}
+
+.session-list {
+    border: 3px solid #999999;
+}
+
+#profileNav button:focus {
+    background-color: transparent;
+}
